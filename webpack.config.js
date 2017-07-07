@@ -17,6 +17,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ['style-loader', 'css-loader'], // first load css file then add style tag to html
+            },
+            {
+                test: /\.scss$/,
+                loader: ['style-loader', 'css-loader', 'sass-loader'], // first read scss file
             }
         ]
     },
