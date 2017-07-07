@@ -4,4 +4,14 @@ module.exports = {
         filename: "./out.js"
     },
     watch: true,
+    module: {
+        loaders: [
+            {
+                test: /\.js$/, // searching .js files
+                exclude: /node_modules/, // don't search in node_modules
+                loader: 'babel-loader', // loader name
+                query: {
+                    presets: ['es2015'] // set source type
+                }
+        ]
 }
