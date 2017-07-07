@@ -1,4 +1,4 @@
-require('./app.css');
+require('./app.scss');
 
 const filename = 'app.js'
 
