@@ -1,1 +1,3 @@
-console.log('app.js');
+const filename = 'app.js'
+
+console.log(filename);
