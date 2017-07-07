@@ -1,0 +1,4 @@
+# exclude node_modules in in current folder and any subfolders
+node_modules/
+
+# more info here: https://github.com/github/gitignore
