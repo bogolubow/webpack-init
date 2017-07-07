@@ -13,5 +13,11 @@ module.exports = {
                 query: {
                     presets: ['es2015'] // set source type
                 }
+            },
+            {
+                test: /\.css$/,
+                loader: ['style-loader', 'css-loader'], // first load css file then add style tag to html
+            }
         ]
+    },
 }
