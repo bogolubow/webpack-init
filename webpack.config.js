@@ -4,6 +4,7 @@ module.exports = {
         filename: "./out.js"
     },
     watch: true,
+    devtool: 'inline-source-map', // more info: https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
     module: {
         loaders: [
             {
