@@ -1,9 +1,12 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: './src/app.js', // you can use __dirname or fs module to create path
+    entry: { // you can use __dirname or fs module to create path
+        'out.js':'./src/app.js',
+        'style.css~':'./src/app.scss', //temporary file
+    },
     output: {
-        filename: './out.js',
+        filename: '[name]',
     },
     watch: true,
     devtool: 'inline-source-map', // more info: https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
