@@ -10,6 +10,8 @@
 
 * w przypadku zmian w pliku `webpack.config.js` należy zatrzymać działanie webpack-a (ctrl+c) i ponownie uruchomić, aby zmiany w konfiguracji zostały załadowane
 
-* `webpack` i `webpack-dev-server` muszą być uruchomione jednocześnie (2 terminale), aby strona się odświeżała automatycznie
+* `webpack` i `webpack-dev-server` nie muszą być uruchomione jednocześnie
+
+* w przypadku zapisu scss do pliku, nie działa wersja automatycznego oświeżania, należy uruchomić tylko webpack-a
 
 * mając zdefiniowane "scripts" w `package.json` możemy uruchomić webpack-a przez `npm run wp` oraz serwer przez `npm run wp-server`
