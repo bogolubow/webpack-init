@@ -1,7 +1,9 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
     entry: './src/app.js', // you can use __dirname or fs module to create path
     output: {
-        filename: "./out.js"
+        filename: './out.js',
     },
     watch: true,
     devtool: 'inline-source-map', // more info: https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
@@ -23,6 +25,20 @@ module.exports = {
                 test: /\.scss$/,
                 loader: ['style-loader', 'css-loader', 'sass-loader'], // first read scss file
             }
+        ],
+
+        rules: [
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader']
+                })
+            }
         ]
     },
+
+    plugins: [
+        new ExtractTextPlugin('./style.css'),
+    ]
 }
